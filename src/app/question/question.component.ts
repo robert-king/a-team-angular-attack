@@ -11,6 +11,7 @@ import { QuestionService } from '../question/question.service'
 export class QuestionComponent implements OnInit {
   isTimeUp = false;
   question: question;
+ 
   
   constructor(private questionService:QuestionService ) { }
 
