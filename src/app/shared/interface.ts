@@ -1,8 +1,10 @@
-export interface question {
-    A:number;
-    B:string;
-    C:string;
-    D: string;
-    answer: string;
-    audioUrl: string;    
+export class  question {
+   public  A:string;
+   public  B:string;
+   public C:string;
+   public D: string;
+   public answer: string;
+   public audioUrl: string;    
+
+
 }
