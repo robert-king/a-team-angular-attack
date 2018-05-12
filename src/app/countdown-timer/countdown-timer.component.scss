@@ -1,0 +1,19 @@
+@import 'src/variables.scss';
+
+.timer-container {
+  background-color: $col-background;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .timer {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    vertical-align: center;
+    background-color: white;
+    color: orange;
+    font-size: 5em;
+    line-height: 2.5em;
+  }
+}
