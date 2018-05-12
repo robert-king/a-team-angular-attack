@@ -1,34 +1,31 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { question} from '../shared/interface'
+import { QuestionService } from '../question/question.service'
+
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
-  styleUrls: ['./question.component.scss']
+  styleUrls: ['./question.component.scss'],
+  providers: [ QuestionService],
 })
 export class QuestionComponent implements OnInit {
   isTimeUp = false;
-  questions: question;
-  constructor() { }
+  question: question;
+  
+  constructor(private questionService:QuestionService ) { }
 
   ngOnInit() {
-    this.questions  = new question ();
-    this.questions.A = 'What is the name of '; 
+    this.initialise();
+    this.refresh();
   }
 
-  // Load all the questions in Config
-  initialise() {
-
+  // Loads the questions from the 
+  initialise() :void {
+    //TODO
   }
   //Randomly select the next question
-  refresh () {
-    let newQuestion = new question();
-    newQuestion.A = 'response A ';
-    newQuestion.B = 'response B';
-    newQuestion.C = 'response C';
-    newQuestion.D = 'response D';
-    newQuestion.answer = 'response is one of A, B, C or D';
-    newQuestion.audioUrl = 'response is one of A, B, C or D';
-    this.questions = newQuestion;
+  refresh ():void {
+    this.question = this.questionService.nextQuestion();
   };
 
 }

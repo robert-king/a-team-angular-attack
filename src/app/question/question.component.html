@@ -1,20 +1,23 @@
 <div class="question-container">
   <app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
   <div class="question-description">
-    Which of these U.S Presidents appeared on the television series "laugh-In"?
+
+      {{ question.label }}
+     
+    
   </div>
   <div class="answer-buttons">
     <button>
-      <span>A:</span> Lyndon Johnson
+      <span>A:</span>  {{ question.A }}
     </button>
     <button>
-      <span>B:</span> Someone Else
+      <span>B:</span>{{ question.B }} 
     </button>
     <button>
-      <span>C:</span> Another answer
+      <span>C:</span> {{ question.C }}
     </button>
     <button>
-      <span>D:</span> Another..
+      <span>D:</span>{{ question.D }}>
     </button>
   </div>
   <div *ngIf="isTimeUp">
