@@ -4,19 +4,15 @@ import * as globals from '../shared/interface'
 import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class QuestionService {
-
-
-  //questions: question[] = [{label:'Which of these U.S Presidents appeared on the television series "laugh-In"?',A:'A',B:'B',C:'C',D:'D',answer:'ANSWER',audioUrl:'URL'}];
   constructor() { 
-
   }
-   nextQuestion(): globals.question  {
-       return globals.questions[2];
+  nextQuestion(): globals.question  {
+       return globals.questions[this.generate()];
   }  
-
-  
-   
-
-
-
-}
+  generate():number  {
+    return  this.getRandomInt(0, (globals.questions.length -1);
+  }
+  getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+ }

@@ -1,11 +1,13 @@
 <div class="question-container">
   <app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
   <div class="question-description">
-
       {{ question.label }}
-     
-    
-  </div>
+
+   </div>
+
+ <button (click)="refresh()">
+  <span>B:</span>{{ question.B }} 
+</button>
   <div class="answer-buttons">
     <button>
       <span>A:</span>  {{ question.A }}
