@@ -1,7 +1,10 @@
 <div>
   Audio
 </div>
-<app-countdown-timer></app-countdown-timer>
+<app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
 <div>
   A, B, C, D buttons
+</div>
+<div *ngIf="isTimeUp">
+  Time up!
 </div>
