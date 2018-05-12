@@ -1,7 +1,21 @@
 <div class="question-container">
   <app-countdown-timer (timeUp)="isTimeUp=true"></app-countdown-timer>
-  <div>
-    A, B, C, D buttons
+  <div class="question-description">
+    Which of these U.S Presidents appeared on the television series "laugh-In"?
+  </div>
+  <div class="answer-buttons">
+    <button>
+      <span>A:</span> Lyndon Johnson
+    </button>
+    <button>
+      <span>B:</span> Someone Else
+    </button>
+    <button>
+      <span>C:</span> Another answer
+    </button>
+    <button>
+      <span>D:</span> Another..
+    </button>
   </div>
   <div *ngIf="isTimeUp">
     Time up!

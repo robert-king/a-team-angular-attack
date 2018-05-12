@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 .question-container {
   padding: 1em;
   display: flex;
@@ -6,4 +8,26 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
+
+
+  .question-description {
+    border-radius: 1em;
+    padding: 1em;
+    background-color: $col-primary;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .answer-buttons {
+    padding: 1em;
+    button {
+      border-radius: 1em;
+      width: 15em;
+      height: 4em;
+
+      span {
+        color: $col-primaryLight;
+      }
+    }
+  }
 }
