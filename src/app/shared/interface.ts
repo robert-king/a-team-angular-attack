@@ -6,6 +6,4 @@ export class  question {
    public  D: string;
    public  answer: string;
    public  audioUrl: string;    
-
-
 }

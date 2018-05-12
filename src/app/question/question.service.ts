@@ -7,8 +7,6 @@ export class QuestionService {
   constructor() { 
 
   }
-
-
    nextQuestion(): question  {
     let newQuestion = new question();
     newQuestion.label = 'Which of these U.S Presidents appeared on the television series "laugh-In"?';
