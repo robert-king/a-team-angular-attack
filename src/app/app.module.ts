@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { NavComponent } from './nav/nav.component';
 import { QuestionComponent } from './question/question.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    QuestionComponent
+    QuestionComponent,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
